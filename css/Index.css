@@ -1,0 +1,413 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+#navbar{
+    display:flex;
+    align-items: center;
+    position:fixed;
+    width:100%;
+}
+#navbar::before{
+    content:"";
+    position:absolute;
+    height:100%;
+    width:100%;
+    z-index:-1; 
+    opacity:1;
+    background-image: linear-gradient(
+      to right,rgb(0,0,0,0.7),rgba(0, 0, 0,0));
+}
+img{
+    height:50px;
+    width:70px;
+    z-index: -1;
+}
+#ul{
+    list-style:none;
+    display:flex;
+    flex-wrap: wrap; 
+    margin-left: auto;
+}
+.item{
+    padding: 0px 10px;
+    height:54px;
+    display:flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.item::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(
+      to bottom,rgb(0,0,0,0),rgba(0, 0, 0,1));
+    z-index: -1;
+    transition: opacity 0.4s linear;
+    opacity: 0;
+  }
+.item:hover::before{
+    opacity:1;
+
+}
+a{
+    text-decoration:none;
+    color:rgb(214, 214, 214);
+    text-shadow: 0 0 10px #3f3f3f, 0 0 10px #3b3b3b;
+    font-family: 'Roboto', sans-serif;
+}
+#hamburger{
+    width:40px;
+    height:40px;
+    margin:0px 10px; 
+    display:block;   
+}
+@media(max-width:400px){
+    #ul{
+        display:none;
+    }
+    #hamburger{
+        display:block;
+        margin-left:auto;
+    }
+}
+@media(min-width:400px){
+    #hamburger{
+        display:none;
+    }
+    #ul{
+        display:flex;
+    }
+}
+.home{
+    display:flex;
+    text-shadow: 0 0 10px #3f3f3f, 0 0 10px #3b3b3b;
+    color:rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    height:400px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home::before{
+    content:"";
+    position:absolute;
+    background:url('/a.jpg') no-repeat top center/contain; 
+    background-size: 100%;
+    top:0px;
+    height:70%;
+    width:100%;
+    z-index:-2;
+    opacity:0.89;
+    filter:blur(6px);
+    animation-name:blur;
+    animation-duration:3s;
+    animation-iteration-count:1;
+    animation-delay:1s;
+}
+@keyframes blur{
+    0%{filter:blur(0px);}
+    100%{filter:blur(6px);}
+}
+h1,h4{
+    animation-name:slide;
+    animation-duration:3s;
+    animation-iteration-count: 1;
+    animation-delay:1s;
+    position:relative;
+} 
+h4:hover{
+    animation-name:slide;
+    animation-duration:3s;
+    animation-iteration-count: 1;
+    animation-delay:1s;
+    position:relative;
+} 
+@keyframes slide{
+    0%{
+        top:150px;
+        font-size: 0px;
+    }
+    100%{
+        top:0px;
+    }
+}
+h4 input{
+    background-color: transparent;
+    border-color:white;
+    text-shadow: 0 0 10px #3f3f3f, 0 0 10px #3b3b3b;
+    box-shadow:0 0 10px #3f3f3f, 0 0 10px #3b3b3b;;
+    padding:5px;
+    margin-top:10px;
+    color:white;
+    border-style: solid;
+    border-radius: 8px;
+    cursor: pointer;
+    transition:all 0.5s;
+}
+h4 input:active{
+    background-color: transparent;
+    border-color:rgb(35, 68, 160);
+    padding:5px;
+    margin-top:10px;
+    color:rgb(35, 68, 160);
+    border-radius: 8px;
+    cursor: pointer;
+}
+h4 input:hover{
+    transform:scale(1.1);
+}
+.table{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items:stretch;
+    background-image: linear-gradient(
+      to bottom,rgb(0, 0, 0,0.4),rgb(0,0,0,0),rgb(0,0,0,0),rgb(0,0,0,0),rgb(0,0,0,0),rgb(0,0,0,0),rgba(0, 0, 0, 0),rgba(0, 0, 0,0.2 ));
+    z-index: -2;
+    transition:transform 1s;
+}
+.table:hover{
+    transform:scale(1.03);
+    background-size: contain;
+}
+#img1::after{
+    content:'Our Reception';
+    align-items: flex-end;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 50px;
+    display:flex;
+    position:absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0;
+    width:auto;
+    height:auto;
+    background-image: linear-gradient(
+      to bottom,rgba(0, 0, 0,0),rgb(0, 0, 0,1));
+    z-index:1;
+    border-radius: 15px;
+}
+
+#img1{
+    display:flex;
+    margin:0px 50px;
+    margin-bottom: 10px;
+    background:url('/IMG_20210629_125807.jpg') no-repeat;
+    background-size:250px 200px;
+    height:200px;
+    width:250px;
+    z-index: -1;
+    position:relative;
+    opacity:1;
+    animation-name:slide2;
+    animation-duration:2s;
+    animation-iteration-count: 1;
+    animation-delay:1s;
+    border:3px solid white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #3f3f3f, 0 0 10px #3b3b3b;;
+}
+#img1:hover::after{
+    animation-name:slide2;
+    animation-duration:2s;
+    animation-iteration-count: 1;
+}
+
+#img2::after{
+    content: "";
+    content: "Our Laser Imager";
+    display:flex;
+    align-items: flex-end;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 50px;
+    position:absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width:auto;
+    height:auto;
+    background-image: linear-gradient(
+      to bottom,rgba(0, 0, 0, 0),rgba(0, 0, 0,1));
+    z-index:1;
+    border-radius: 15px;
+}
+#img2{
+    margin:0px 50px;
+    margin-bottom: 10px;
+    background:url('/1.webp') no-repeat;
+    background-size:250px 200px;
+    height:200px;
+    width:250px;
+    z-index: -1;
+    position:relative;
+    opacity:1;
+    animation-name:slide3;
+    animation-duration:2s;
+    animation-iteration-count: 1;
+    animation-delay:1s;
+    border-radius: 15px;
+    border:3px solid white;
+    box-shadow: 0 0 10px #3f3f3f, 0 0 10px #3b3b3b;;
+}
+#img2:hover::after{
+    animation-name:slide3;
+    animation-duration:2s;
+    animation-iteration-count: 1;
+}
+#img3::after{
+    content: "";
+    content: "Our DR System";
+    display:flex;
+    align-items: flex-end;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 50px;
+    position:absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width:auto;
+    height:auto;
+    background-image: linear-gradient(
+      to bottom,rgba(0, 0, 0, 0),rgba(0, 0, 0,1));
+    z-index:1;
+    border-radius: 15px;
+}
+
+#img3{
+    margin:0px 50px;
+    margin-bottom: 10px;
+    background:url('/drx1-systems-1.jpg') no-repeat;
+    background-size:250px 200px;
+    height:200px;
+    width:250px;
+    z-index: -1;
+    position:relative;
+    opacity:1;
+    animation-name:slide1;
+    animation-duration:2s;
+    animation-iteration-count: 1;
+    animation-delay:1s;
+    border-radius: 15px;
+    border:3px solid white;
+    box-shadow:0 0 10px #3f3f3f, 0 0 10px #3b3b3b;;
+}
+#img3:hover::after{
+    animation-name:slide1;
+    animation-duration:2s;
+    animation-iteration-count: 1;
+}
+#img4::after{
+    content: "Our X-Ray Machines.";
+    display:flex;
+    align-items: flex-end;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 50px;
+    position:absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width:auto;
+    height:auto;
+    background-image: linear-gradient(
+      to bottom,rgba(0, 0, 0, 0),rgba(0, 0, 0,1));
+    z-index:1;
+    border-radius: 15px;
+}
+
+#img4{
+    margin:0px 50px;
+    margin-bottom: 10px;
+    background:url('/WhatsApp\ Image\ 2021-07-03\ at\ 2.40.02\ PM.jpeg') no-repeat;
+    background-size:250px 200px;
+    height:200px;
+    width:250px;
+    z-index: -1;
+    position:relative;
+    opacity:1;
+    animation-name:slide4;
+    animation-duration:2s;
+    animation-iteration-count: 1;
+    animation-delay:1s;
+    border-radius: 15px;
+    border:3px solid white;
+    box-shadow:0 0 10px #3f3f3f, 0 0 10px #3b3b3b;;
+}
+#img4:hover::after{
+    animation-name:slide4;
+    animation-duration:2s;
+    animation-iteration-count: 1;
+}
+@keyframes slide4{
+    0%{
+        left:100px;
+    }
+    100%{
+        left:0px;
+    }
+}
+@keyframes slide1{
+    0%{
+        left:300px;
+    }
+    100%{
+        left:0px;
+    }
+}
+@keyframes slide2{
+    0%{
+        left:600px;
+    }
+    100%{
+        left:0px;
+    }
+}
+@keyframes slide3{
+    0%{
+        left:900px;
+    }
+    100%{
+        left:0px;
+    }
+}
+.container2{
+    display:flex;
+    text-shadow: 0 0 10px #3f3f3f, 0 0 10px #3b3b3b;
+    color:rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    height:400px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+.container2::before{
+    content:"";
+    position:absolute;
+    background:url('/photo-1579684288402-e3e337bcc7af.jpg') no-repeat top center/contain; 
+    background-size: 100%;
+    top:600px;
+    height:100%;
+    width:100%;
+    z-index:-2;
+    opacity:0.89;
+    
+}
+
+

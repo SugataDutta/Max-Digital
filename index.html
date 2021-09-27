@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="description">
+    <meta name="keywords" content="Max digitals.">
+    <meta name="robot" content="INDEX, FOLLOW">
+    <link rel="stylesheet" type="text/css" href="/css/Index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <title>Max Digitals</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo copy.png" alt="maxdigital.com">
+        </div>
+        <ul id='ul'>
+            <div class="item"><a href="/index.html">Home</a></div>
+            <div class="item"><a href="#">Services</a></div>
+            <div class="item"><a href="#">Amin login</a></div>
+            <div class="item"><a href="#">About us</a></div>
+            <div class="item"><a href="#">Contact us</a></div>
+        </ul>
+        <input type="button" id='hamburger'>
+        <script>
+            let btn =document.getElementById('hamburger');
+            let ul = document.getElementById('ul');
+            btn.addEventListener('click', function run(){
+                console.log(1);
+                if(ul.style.display=='none'){
+                    ul.style.display='flex';
+                }
+                else{
+                    ul.style.display='none';
+                }
+            })
+        </script>
+    </nav>
+    <div class="home">
+        <h1>Welcome to Max Digitals</h1>
+        <h4>We are here for your maximum Benifit.<br>
+            <center><input type='button' value='Book Appontment'></center>
+        </h4>
+    </div>
+    <a href="#"><div class="table">
+         <div id='img2'></div>
+         <div id='img1'></div>
+         <div id='img3'></div>
+         <div id='img4'></div>
+    </div></a>
+    <div class="container2">
+
+    </div>
+
+</body>
+
+</html>
